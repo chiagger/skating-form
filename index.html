@@ -23,54 +23,62 @@
             <p>Sign up to our website to keep track of your reward points. </p>
             <p>Sign up <em>now</em> to get started.</p>
         </div>
-        <div class="form-container">
-            <div id="desc">Become a sk8er :)</div>
-            <div class="name-surname">
-                <div id="username">
-                    <label for="name">Name</label>
-                    <input type="name" name="name" id="name" placeholder="John...">
-                    
-                </div>
-                <div id="usersurname">
-                    <label for="surname">Surname</label>
-                    <input type="surname" name="surname" id="surname" placeholder="Smith...">
-                    
+        <form action="#" method="post">
+            <div class="form-container">
+                <div id="desc">Become a sk8er :)</div>
+                <div class="inputs">
+                    <div class="name-surname">
+                        <div id="username">
+                            <label for="name">Name</label>
+                            <input type="name" name="name" id="name" placeholder="John..." required>
+
+                        </div>
+                        <div id="usersurname">
+                            <label for="surname">Surname</label>
+                            <input type="surname" name="surname" id="surname" placeholder="Smith..." required>
+
+                        </div>
+                    </div>
+
+
+                    <div class="contact">
+                        <div id="useremail">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="john.smith@gmail.com" required>
+
+                        </div>
+
+                        <div id="usertel">
+                            <label for="tel">Phone Number</label>
+                            <input type="tel" name="tel" id="tel" placeholder="333-3333333" pattern="[0-9]{3}-[0-9]{7}"
+                                required>
+
+                        </div>
+                    </div>
+
+                    <div class="pssw">
+                        <div id="userpssw">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" placeholder=" " required minlength="8">
+
+                        </div>
+
+                        <div id="userpsswconf">
+                            <label for="password-conf">Confirm Password</label>
+                            <input type="password" name="password-conf" id="password-conf" placeholder=" " required
+                                minlength="8">
+
+                        </div>
+                    </div>
+                    <div class="login">
+                        <button type="submit" id="signup">Sign Up</button>
+                        <div id="loginlink">Already signed up? <a id="linkbtn">Log in</a></div>
+                    </div>
                 </div>
             </div>
+        </form>
 
 
-            <div class="contact">
-                <div id="useremail">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="john.smith@gmail.com">
-                    
-                </div>
-
-                <div id="usertel"> 
-                    <label for="tel">Phone Number</label>
-                    <input type="tel" name="tel" id="tel">
-                   
-                </div>
-            </div>
-
-            <div class="pssw">
-                <div id="userpssw">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
-                    
-                </div>
-
-                <div id="userpsswconf">
-                    <label for="password-conf">Confirm Password</label>
-                    <input type="password" name="password-conf" id="password-conf">
-                    
-                </div>
-            </div>
-        </div>
-        <div class="login">
-        <button id="signup">Sign Up</button>
-        <div id="loginlink">Already signed up? <a id="linkbtn">Log in.</a></div>
-    </div>
     </div>
 
 

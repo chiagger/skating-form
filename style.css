@@ -2,15 +2,15 @@
 
 html {
     height: 100%;
-    width:100%;
-    
+    width: 100%;
+
 }
 
 body {
     height: 100%;
-    width:100%;
-    display:flex;
-    margin:0;
+    width: 100%;
+    display: flex;
+    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background-color: #F9F5EC;
 }
@@ -18,15 +18,15 @@ body {
 .left {
     background-image: url("./img/bckgr.jpg");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     width: 50vw;
-    
+
 }
 
 .logo-container {
-    display:flex;
-    align-items:center;
-    position:fixed;
+    display: flex;
+    align-items: center;
+    position: fixed;
     min-width: 30vw;
 }
 
@@ -37,11 +37,11 @@ body {
     margin-right: 30px;
     min-width: fit-content;
     min-height: fit-content;
-   
+
 }
 
 .right {
-    display:flex;
+    display: flex;
     flex-direction: column;
     font-size: 90px;
     justify-content: center;
@@ -49,16 +49,15 @@ body {
     gap: 130px;
 }
 
-
-.form-container {
-    background-color: #fff0df;
-    padding: 150px;
-    font-size: 90px;
-    border-radius: 60px;
-    width:50vw;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
+form {
+    box-sizing: border-box;
+    padding: 8rem;
+    border-radius: 4rem;
+    background-color: #faebda;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem;
+    width: fit-content;
 }
 
 #desc {
@@ -66,14 +65,16 @@ body {
     font-weight: bold;
 
 }
+
 .description {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    font-size: 130px ;
+    font-size: 110px;
 }
+
 .description p {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -86,46 +87,114 @@ input {
     border-radius: 25px;
 }
 
-#username,#usersurname,#useremail,#usertel ,#userpssw,#userpsswconf {
-    display:flex;
-    flex-direction: column;
-    font-size: 80px;
-    
+input#name:focus,
+input#surname:focus,
+input#email:focus,
+input#tel:focus,
+input#password:focus,
+input#password-conf:focus {
+    outline: none;
+    border: 2px solid blue;
+    box-shadow: 2px 2px gray;
+
 }
 
+input#name:valid,
+input#surname:valid,
+input#email:valid,
+input#tel:valid,
+input#password:valid,
+input#password-conf:valid {
+    outline: none;
+    border: 2px solid rgb(132, 214, 9);
+    box-shadow: 2px 2px gray;
 
-.name-surname, .contact, .pssw {
-    display:flex;
+}
+
+input#name:not(:placeholder-shown):invalid,
+input#surname:not(:placeholder-shown):invalid,
+input#email:not(:placeholder-shown):invalid,
+input#tel:not(:placeholder-shown):invalid,
+input#password:not(:placeholder-shown):invalid,
+input#password-conf:not(:placeholder-shown):invalid {
+    outline: none;
+    border: 2px solid red;
+    box-shadow: 2px 2px gray;
+
+}
+
+#name,
+#surname,
+#email,
+#tel,
+#password,
+#password-conf {
+    width: fit-content;
+    appearance: none;
+    --webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 4rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin: 0;
+    box-sizing: border-box;
+    border: 2px solid #ded5cd;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 3px 6px rgb(212, 211, 211);
+
+}
+
+.name-surname,
+.contact,
+.pssw {
+    display: flex;
     gap: 100px;
 }
 
 .login {
-    display:flex;
+    display: flex;
     flex-direction: column;
     margin-left: 80px;
-    gap:70px;
+    gap: 70px;
     font-size: 80px;
 }
 
 #signup {
+    margin-top: 100px;
     width: fit-content;
-    height:auto;
-    padding: 50px;
-    
-    padding-left: 100px;
-    padding-right: 100px;
-    border-radius: 90px;
+    height: auto;
+    padding: 40px;
+    padding-left: 200px;
+    padding-right: 200px;
+    border-radius: 50px;
     font-size: 90px;
-    background-color: #d0a67a;
-    border-color: #67523c;
-    color:#F9F5EC;
-    box-shadow: #67523c;
+    background-color: #ca9153;
+    font-weight: bold;
+    color: #f4ead1;
+    outline: none;
+    border:none;
+    box-shadow: 4px 4px #aa9681;
+    cursor: pointer;
+}
+
+#signup:hover {
+    background-color: #937e69;
 }
 
 #linkbtn {
-    color:#d0a67a;
+    color: #d0a67a;
 }
 
 #linkbtn:hover {
-    color:#67523c;
+    color: #67523c;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
