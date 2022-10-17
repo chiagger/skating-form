@@ -19,7 +19,7 @@ body {
     background-image: url("./img/bckgr.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 50vw;
+    width: 40vw;
 
 }
 
@@ -27,26 +27,31 @@ body {
     display: flex;
     align-items: center;
     position: fixed;
-    min-width: 30vw;
+    width: 40vw;
+    flex-wrap: nowrap;
+}
+
+#logo {
+    width: 8vw;
 }
 
 .name {
     color: rgb(93, 93, 93);
     font-family: 'Raleway', sans-serif;
-    font-size: 130px;
+    font-size: 2em;
     margin-right: 30px;
-    min-width: fit-content;
-    min-height: fit-content;
-
 }
 
 .right {
+    width: 60vw;
+    height: 400px;
     display: flex;
     flex-direction: column;
     font-size: 90px;
     justify-content: center;
     padding: 5vw;
     gap: 130px;
+    zoom: 30%;
 }
 
 form {
@@ -67,6 +72,7 @@ form {
 }
 
 .description {
+    margin-top: 260vh;
     display: flex;
     flex-direction: column;
     font-size: 110px;
@@ -175,7 +181,7 @@ input#password-conf:not(:placeholder-shown):invalid {
     font-weight: bold;
     color: #f4ead1;
     outline: none;
-    border:none;
+    border: none;
     box-shadow: 4px 4px #aa9681;
     cursor: pointer;
 }
