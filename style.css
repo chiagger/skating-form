@@ -43,7 +43,7 @@ body {
 }
 
 .right {
-    width: 60vw;
+    width: 150vw;
     height: 400px;
     display: flex;
     flex-direction: column;
