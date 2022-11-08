@@ -83,8 +83,6 @@ form {
     padding: 0;
 }
 
-
-
 input {
     width: 700px;
     height: 100px;
@@ -93,48 +91,12 @@ input {
     border-radius: 25px;
 }
 
-input#name:focus,
-input#surname:focus,
-input#email:focus,
-input#tel:focus,
-input#password:focus,
-input#password-conf:focus {
-    outline: none;
-    border: 2px solid blue;
-    box-shadow: 2px 2px gray;
-
-}
-
-input#name:valid,
-input#surname:valid,
-input#email:valid,
-input#tel:valid,
-input#password:valid,
-input#password-conf:valid {
-    outline: none;
-    border: 2px solid rgb(132, 214, 9);
-    box-shadow: 2px 2px gray;
-
-}
-
-input#name:not(:placeholder-shown):invalid,
-input#surname:not(:placeholder-shown):invalid,
-input#email:not(:placeholder-shown):invalid,
-input#tel:not(:placeholder-shown):invalid,
-input#password:not(:placeholder-shown):invalid,
-input#password-conf:not(:placeholder-shown):invalid {
-    outline: none;
-    border: 2px solid red;
-    box-shadow: 2px 2px gray;
-
-}
-
 #name,
 #surname,
 #email,
 #tel,
 #password,
-#password-conf {
+#password-conf, #country, #zip{
     width: fit-content;
     appearance: none;
     --webkit-appearance: none;
@@ -150,8 +112,57 @@ input#password-conf:not(:placeholder-shown):invalid {
     background-color: white;
     border-radius: 2rem;
     box-shadow: 3px 6px rgb(212, 211, 211);
+}
+
+#country {
+    font-size: 0.5em;
+    padding: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    width: 100%;
+}
+
+
+input#name:focus,
+input#surname:focus,
+input#email:focus,
+input#tel:focus,
+input#password:focus,
+input#password-conf:focus,
+#country:focus,
+#zip:focus {
+    outline: none;
+    border: 2px solid blue;
+    box-shadow: 2px 2px gray;
 
 }
+
+input#name:valid,
+input#surname:valid,
+input#email:valid,
+input#tel:valid,
+input#password:valid,
+input#password-conf:valid,
+#country:valid,
+#zip:not(:placeholder-shown):valid{
+    outline: none;
+    border: 2px solid rgb(132, 214, 9);
+    box-shadow: 2px 2px gray;
+}
+
+input#name:not(:placeholder-shown):invalid,
+input#surname:not(:placeholder-shown):invalid,
+input#email:not(:placeholder-shown):invalid,
+input#tel:not(:placeholder-shown):invalid,
+input#password:not(:placeholder-shown):invalid,
+input#password-conf:not(:placeholder-shown):invalid,
+#zip:not(:placeholder-shown):invalid {
+    outline: none;
+    border: 2px solid red;
+    box-shadow: 2px 2px gray;
+
+}
+
 
 .name-surname,
 .contact,
@@ -204,3 +215,4 @@ input#password-conf:not(:placeholder-shown):invalid {
     flex-direction: column;
     gap: 2em;
 }
+
